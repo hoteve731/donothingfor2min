@@ -1,0 +1,42 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #ffe6f2; /* Light pink background */
+}
+
+#timer {
+    font-size: 3em;
+    margin: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#end-message a {
+    display: block;
+    margin-top: 10px;
+}
+
+#try-again {
+    color: red;
+    font-size: 1.2em;
+    display: none; /* Hidden by default */
+    margin-bottom: 10px;
+}
+
+.red {
+    color: red;
+    transition: color 1s; /* Smooth transition to red color */
+}
+
+#refreshButton {
+    padding: 10px 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #dcdcdc;
+    cursor: pointer;
+}
+
+#refreshButton:hover {
+    background-color: #e6e6e6;
+}
