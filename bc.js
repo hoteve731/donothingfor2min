@@ -1,5 +1,5 @@
 window.onload = function() {
-    var timeLeft = 5; // 2 minutes in seconds
+    var timeLeft = 5; // 5 seconds
     var initialMessage = document.getElementById('initial-message');
     var timerElem = document.getElementById('timer');
     var tryAgainMessage = document.getElementById('try-again');
@@ -33,8 +33,8 @@ window.onload = function() {
 
         if (timeLeft < 0) {
             clearInterval(interval);
-            initialMessage.style.display = 'none'; // Hide the initial message
-            tryAgainMessage.style.display = 'none'; // Hide the 'Try Again' message
+            initialMessage.style.display = 'none';
+            tryAgainMessage.style.display = 'none';
             timerElem.classList.add('hidden');
             endMessage.classList.remove('hidden');
         }
@@ -42,9 +42,10 @@ window.onload = function() {
 
     startTimer(); // Start the timer initially
 
-    // Reset timer on mouse or keyboard interaction
+    // Reset timer on mouse, keyboard, or touch interaction
     window.addEventListener('mousemove', resetTimer);
     window.addEventListener('keypress', resetTimer);
+    window.addEventListener('touchstart', resetTimer);
 };
 
 document.getElementById('refreshButton').addEventListener('click', function() {
