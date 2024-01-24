@@ -2,6 +2,18 @@ body {
     text-align: center;
     font-family: Arial, sans-serif;
     background-color: #ffa9d3; /* Light pink background */
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #timer {
@@ -13,30 +25,31 @@ body {
     display: none;
 }
 
+#self-exam-image img {
+    max-width: 100%;
+    height: auto;
+    border: 2px dashed #ccc;
+    margin-top: 20px;
+}
+
 #end-message a {
     display: block;
     margin-top: 10px;
+    color: #d63384;
+    text-decoration: none;
 }
 
-#try-again {
+#end-message a:hover {
+    text-decoration: underline;
+}
+
+#retry-message {
     color: red;
-    font-size: 1.2em;
-    display: none; /* Hidden by default */
-    margin-bottom: 10px;
+    font-size: 2em;
+    display: none;
+    margin-top: 20px;
 }
 
-.red {
+.timer-red {
     color: red;
-    transition: color 1s; /* Smooth transition to red color */
-}
-
-#refreshButton {
-    padding: 10px 20px;
-    background-color: #f2f2f2;
-    border: 1px solid #dcdcdc;
-    cursor: pointer;
-}
-
-#refreshButton:hover {
-    background-color: #e6e6e6;
 }

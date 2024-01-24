@@ -4,34 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Breast Cancer Awareness</title>
+    <title>도전! 1분 참기 챌린지</title>
     <link rel="stylesheet" href="bc.css">
 </head>
 
 <body>
     <div id="content">
-        <div id="initial-message">2분동안 아무것도 클릭하지 말고, 오늘 하루를 되돌아 보는 시간을 보내보세요.</div>
-        <div id="try-again" class="hidden">다시 도전해보세요!</div>
-        <div id="timer">2:00</div>
+        <div id="initial-message">1분 동안 아무것도 하지 않고 참아보세요.</div>
+        <div id="ten-second-message" class="hidden">와우, 10초를 잘 참으셨네요! 이처럼, 유방암 자가진단을 하는 것도, 빠르면 1분도 걸리지 않습니다. 남은 타이머 시간동안 유방암 자가진단 방법을 읽어봐주세요.</div>
+        
+        <div id="retry-message" class="hidden">다시 시도해보세요!</div>
+        <div id="timer">1:00</div>
         <div id="end-message" class="hidden">
-            
-            유방암 자가 검진에 걸리는 시간, 단 2분입니다. <br>
-            정기적인 자가 검진은 조기 발견의 핵심입니다.
-
-            <!-- Links to resources -->
+            <!-- End message and links here -->
+            <h3>1분 챌린지 성공!</h3>
             <a href="chatroom_link_here">유방암 정보 공유 오픈카톡방</a>
             <a href="blog_link_here">유방암 정보 공유 블로그를 방문해보세요</a>
             <a href="app_link_here">환우 커뮤니티 앱 '이음'을 살펴보세요</a>
-
-            <button id="refreshButton">다시 하기</button>
         </div>
+        <div id="self-exam-image" class="hidden"><img src="jindan.jpg" alt="유방암 자가진단 방법"></div>
     </div>
-    <script src="bc.js">
-
-        document.getElementById('refreshButton').addEventListener('click', function () {
-            window.location.reload();
-        });
-    </script>
+    <script src="bc.js"></script>
 </body>
 
 </html>
