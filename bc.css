@@ -68,3 +68,8 @@ body {
     text-decoration-line: underline;
     
 }
+
+button {
+    font-size: 2em;
+    font-weight: 600;
+}
