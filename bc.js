@@ -8,6 +8,8 @@ window.onload = function() {
     var endMessage = document.getElementById('end-message');
     var interval;
 
+    var touchStartY;
+
     function startTimer() {
         interval = setInterval(updateTimer, 1000);
     }
@@ -34,8 +36,6 @@ window.onload = function() {
         }
     }
 
-    startTimer();
-
     function resetTimer() {
         if (timeLeft > 0) {
             clearInterval(interval);
@@ -53,7 +53,19 @@ window.onload = function() {
         }
     }
 
+    window.addEventListener('touchstart', function(event) {
+        touchStartY = event.touches[0].clientY;
+    });
+
+    window.addEventListener('touchend', function(event) {
+        var touchEndY = event.changedTouches[0].clientY;
+
+        // If the touch movement is minimal, it's considered a tap, not a swipe
+        if (Math.abs(touchStartY - touchEndY) < 10) {
+            resetTimer();
+        }
+    });
+
     window.addEventListener('mousemove', resetTimer);
     window.addEventListener('keypress', resetTimer);
-    window.addEventListener('touchstart', resetTimer);
 };
