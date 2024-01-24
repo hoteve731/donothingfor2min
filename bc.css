@@ -60,3 +60,11 @@ body {
 .timer-red {
     color: red;
 }
+
+.link-button {
+    color: blue;
+    font-weight: 600;
+    font-size: 2em;
+    text-decoration-line: underline;
+    
+}

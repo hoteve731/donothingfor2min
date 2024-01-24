@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>도전! 1분 참기 챌린지</title>
+    <meta property="og:description" content="생각보다 어려울걸?">
+    <meta property="og:image" href="cover.png">
     <link rel="stylesheet" href="bc.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
@@ -14,18 +16,29 @@
 <body>
     <div id="content">
         <div id="initial-message">1분 동안 <br>아무것도 하지 않고 <br>참아보세요</div>
-        <div id="ten-second-message" class="hidden"><br>와우, 10초를 잘 참으셨네요! <br>유방암 자가진단도 빠르면 1분도 걸리지 않습니다. <br>유방 자가진단을 통해 유방암의 80%를 조기에 발견할 수 있습니다. <br>한국 기준 연 2만명 이상의 사람이 유방암을 진단받고 있습니다. <br> 유방암은 여성에게 발생하는 암 중 가장 흔한 암입니다. <br> 남은 타이머 시간동안 유방암 자가진단 방법을 읽어봐주세요.<br><br>1분이 지나면, 이미지를 꾹 눌러서 저장하실 수 있어요. </div>
-        
         <div id="retry-message" class="hidden">다시 시도해보세요!</div>
+        
+        <div id="ten-second-message" class="hidden"><br>와우, 10초나 잘 참으셨네요! 1분이 생각보다 길게 느껴지지 않으신가요? <br>유방암 자가진단은 빠르면 1분도 걸리지 않을 수 있습니다. <br>유방암 자가진단을 통해 유방암의 80%를 조기에 발견할 수 있어요.<br> <br>한국 기준 연 2만명 이상의 사람이 유방암을 진단받고 있으며, 진단 연령대는 점점 어려지고 있습니다. <br> <br> 2024년 기준, 유방암은 여성에게 발생하는 암 중 가장 흔한 암입니다. <br><br> 남은 타이머 시간동안 유방암 자가진단 방법을 읽어보세요! <br>1분이 지나면, 이미지를 꾹 눌러서 저장하실 수 있어요. </div>
         <div id="timer">1:00</div>
+        <div id="self-exam-image" class="hidden"><img src="jindan.jpg" alt="유방암 자가진단 방법"></div>
+        
         <div id="end-message" class="hidden">
             <!-- End message and links here -->
             <h3>1분 챌린지 성공!</h3>
-            <a href="chatroom_link_here">유방암 정보 공유 오픈카톡방</a>
-            <a href="blog_link_here">유방암 정보 공유 블로그를 방문해보세요</a>
-            
+            <h2>보기보단 쉽지 않았죠? <br> 다른 분들은 성공할 수 있을까요?</h2>
+
             <button id="retry-button">다시하기</button>
             <button id="share-button">공유하기</button>
+
+            <h3>유방암 지식 공유 오픈카톡방에서 여러분의 지식을 나눠주세요.</h3>
+            <a href="https://open.kakao.com/o/gZ82xI4f" class="link-button">바로가기</a>
+            <h4>유방암을 직접, 또는 옆에서 경험하신 분들끼리 나눌 수 있는 지식은 무궁무진하다고 생각합니다. 
+                <br>본인은 당연히 알고 있는 지식이더라도 다른 분들껜 꼭 필요한 지식일 수 있고, 그 반대일 수도 있으니까요.<br>
+                부담없이 유방암에 대해 알고 계신 것들을 나누고 또 새로 알아가는 공간이 만들어졌으면 좋겠습니다! 
+                </h4>
+            
+            
+            <div id="self-exam-image"><img src="jindan.jpg" alt="유방암 자가진단 방법"></div>
         </div>
         <div id="self-exam-image" class="hidden"><img src="jindan.jpg" alt="유방암 자가진단 방법"></div>
     </div>

@@ -38,6 +38,8 @@ window.onload = function() {
         }
     }
 
+    startTimer(); // 페이지 로드 시 타이머 시작
+
     function resetTimer() {
         if (timeLeft > 0) {
             clearInterval(interval);
@@ -61,7 +63,6 @@ window.onload = function() {
 
     window.addEventListener('touchend', function(event) {
         var touchEndY = event.changedTouches[0].clientY;
-        // If the touch movement is minimal, it's considered a tap, not a swipe
         if (Math.abs(touchStartY - touchEndY) < 10) {
             resetTimer();
         }
@@ -85,7 +86,6 @@ window.onload = function() {
                 alert('공유되었습니다!');
             }).catch(console.error);
         } else {
-            // 클립보드에 URL 복사
             navigator.clipboard.writeText(window.location.href).then(() => {
                 alert('URL이 클립보드에 복사되었습니다.');
             }).catch(console.error);
