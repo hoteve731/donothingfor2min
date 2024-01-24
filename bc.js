@@ -22,7 +22,7 @@ window.onload = function() {
         timerElem.textContent = minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
         timeLeft--;
 
-        if (timeLeft === 50) {
+        if (timeLeft === 30) {
             tenSecondMessage.classList.remove('hidden');
             selfExamImage.classList.remove('hidden');
         }
