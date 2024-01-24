@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>도전! 1분 참기 챌린지</title>
     <link rel="stylesheet" href="bc.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+      </style>
 </head>
 
 <body>
     <div id="content">
-        <div id="initial-message">1분 동안 아무것도 하지 않고 참아보세요.</div>
-        <div id="ten-second-message" class="hidden"><br>와우, 10초를 잘 참으셨네요! 이처럼, 유방암 자가진단을 하는 것도, 빠르면 1분도 걸리지 않습니다. 남은 타이머 시간동안 유방암 자가진단 방법을 읽어봐주세요.<br><br>1분이 지나면, 이미지를 꾹 눌러서 저장하실 수 있어요. (스크롤은 가능하답니다) </div>
+        <div id="initial-message">1분 동안 <br>아무것도 하지 않고 <br>참아보세요</div>
+        <div id="ten-second-message" class="hidden"><br>와우, 10초를 잘 참으셨네요! <br>유방암 자가진단도 빠르면 1분도 걸리지 않습니다. <br>유방 자가진단을 통해 유방암의 80%를 조기에 발견할 수 있습니다. <br>한국 기준 연 2만명 이상의 사람이 유방암을 진단받고 있습니다. <br> 유방암은 여성에게 발생하는 암 중 가장 흔한 암입니다. <br> 남은 타이머 시간동안 유방암 자가진단 방법을 읽어봐주세요.<br><br>1분이 지나면, 이미지를 꾹 눌러서 저장하실 수 있어요. </div>
         
         <div id="retry-message" class="hidden">다시 시도해보세요!</div>
         <div id="timer">1:00</div>
@@ -20,7 +23,9 @@
             <h3>1분 챌린지 성공!</h3>
             <a href="chatroom_link_here">유방암 정보 공유 오픈카톡방</a>
             <a href="blog_link_here">유방암 정보 공유 블로그를 방문해보세요</a>
-            <a href="app_link_here">환우 커뮤니티 앱 '이음'을 살펴보세요</a>
+            
+            <button id="retry-button">다시하기</button>
+            <button id="share-button">공유하기</button>
         </div>
         <div id="self-exam-image" class="hidden"><img src="jindan.jpg" alt="유방암 자가진단 방법"></div>
     </div>

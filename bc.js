@@ -7,8 +7,10 @@ window.onload = function() {
     var retryMessage = document.getElementById('retry-message');
     var endMessage = document.getElementById('end-message');
     var interval;
-
     var touchStartY;
+
+    var retryButton = document.getElementById('retry-button');
+    var shareButton = document.getElementById('share-button');
 
     function startTimer() {
         interval = setInterval(updateTimer, 1000);
@@ -59,7 +61,6 @@ window.onload = function() {
 
     window.addEventListener('touchend', function(event) {
         var touchEndY = event.changedTouches[0].clientY;
-
         // If the touch movement is minimal, it's considered a tap, not a swipe
         if (Math.abs(touchStartY - touchEndY) < 10) {
             resetTimer();
@@ -68,4 +69,26 @@ window.onload = function() {
 
     window.addEventListener('mousemove', resetTimer);
     window.addEventListener('keypress', resetTimer);
+
+    // 다시하기 버튼 이벤트 리스너
+    retryButton.addEventListener('click', function() {
+        window.location.reload();
+    });
+
+    // 공유하기 버튼 이벤트 리스너
+    shareButton.addEventListener('click', function() {
+        if (navigator.share) {
+            navigator.share({
+                title: '도전! 1분 참기 챌린지',
+                url: window.location.href
+            }).then(() => {
+                alert('공유되었습니다!');
+            }).catch(console.error);
+        } else {
+            // 클립보드에 URL 복사
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert('URL이 클립보드에 복사되었습니다.');
+            }).catch(console.error);
+        }
+    });
 };

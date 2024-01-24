@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Poor Story', system-ui;
     background-color: #ffa9d3; /* Light pink background */
     margin: 0;
     padding: 20px;
@@ -14,13 +14,20 @@ body {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
 #timer {
-    font-size: 3em;
+    font-size: 4em;
     margin: 20px;
+    font-weight: 900;
 }
+#initial-message{
+    margin-top: 20px;
+    font-size: 2em;
+    font-weight: 700;
 
+}
 .hidden {
     display: none;
 }
